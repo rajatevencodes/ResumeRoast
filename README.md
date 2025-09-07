@@ -1,6 +1,6 @@
 # Resume Roast 🍖
 
-> An AI-powered resume feedback system that gives you honest, humorous feedback on your resume using scalable RAG (Retrieval-Augmented Generation) technology.
+An AI-powered resume feedback system that gives you honest, humorous feedback on your resume using RAG (Retrieval-Augmented Generation) technology which is scalable
 
 ## 🎥 Demo
 
