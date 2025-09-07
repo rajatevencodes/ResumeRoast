@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart # For handling file uploads
+aiofiles # For asynchronous file handling
+ipykernel
+langgraph
+openai
+pdf2image
+pymongo 
+dotenv
+# bson # Handling MongoDB ObjectIDs # Don't download this, it's part of pymongo otherwise it will conflict
+python-multipart
+rq # Redis Queue for background tasks

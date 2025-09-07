@@ -1,0 +1,40 @@
+services:
+  backend:
+    build: .
+    container_name: resume-roast-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MONGO_URI=mongodb://admin:admin@mongo:27017/
+      - VALKEY_HOST=valkey
+      - VALKEY_PORT=6379
+    depends_on:
+      - mongo
+      - valkey
+    restart: always
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    volumes:
+      - mongodb_data:/data/db
+
+  # Redis is Paid , Valkey free alternative :)
+  valkey:
+    image: valkey/valkey:latest
+    container_name: valkey
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - valkey_data:/data
+
+volumes:
+  mongodb_data:
+  valkey_data:

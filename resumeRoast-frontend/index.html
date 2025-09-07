@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Roaster</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <div class="background-overlay"></div>
+
+  <!-- Upload Section -->
+  <div id="upload-section" class="upload-section">
+    <div class="upload-content">
+      <h2 class="upload-title">Upload Your Resume</h2>
+      <input type="file" id="resume-upload" accept=".pdf,.doc,.docx" class="file-input" />
+      <label for="resume-upload" class="file-label">
+        <span>Choose File</span>
+        <small>PDF, DOC, DOCX (Max 5MB)</small>
+      </label>
+    </div>
+  </div>
+
+  <!-- Progress Messages Section -->
+  <div id="progress-section" class="progress-section hidden">
+    <div class="progress-content">
+      <p id="progress-message">Queuing your file...</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="main-content hidden">
+    <h1 class="title">Resume Roast</h1>
+    <div class="circle"></div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+  <script src="https://js.puter.com/v2/"></script>
+</body>
+
+</html>
